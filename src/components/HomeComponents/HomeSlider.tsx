@@ -90,7 +90,7 @@ const HomeSlider = () => {
   };
 
   return (
-    <div className="relative w-full h-[45vh] sm:h-[60vh] md:h-[70vh] lg:h-[90vh] overflow-hidden">
+    <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[90vh] overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-black/100 via-black/100 to-black/100 z-0"></div>
 
       <AnimatePresence mode="wait" custom={direction}>
@@ -162,7 +162,7 @@ fill
               {slides[current].title}
             </div>
             {slides[current].subtitle && (
-              <div className="md:text-[1.2em] text-[1em] font-light font-sans mb-4 sm:mb-6 w-full sm:w-3/4 md:w-1/2 mx-auto drop-shadow">
+              <div className="md:text-[1.2em] text-[1em] font-light font-sans mb-4 sm:mb-6 w-[90%] sm:w-3/4 md:w-1/2 mx-auto drop-shadow">
                 {slides[current].subtitle}
               </div>
             )}
