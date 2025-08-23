@@ -90,7 +90,7 @@ const HomeSlider = () => {
   };
 
   return (
-    <div className="relative w-full h-[51vh] sm:h-[61vh] md:h-[70vh] lg:h-[90vh] overflow-hidden">
+    <div className="relative w-full h-[51vh] sm:h-[50vh] md:h-[50vh] lg:h-[90vh] overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-black/100 via-black/100 to-black/100 z-0"></div>
 
       <AnimatePresence mode="wait" custom={direction}>
