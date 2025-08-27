@@ -54,6 +54,13 @@ export default function Header() {
     // { href: '/blog', label: 'Blog', current: pathname.startsWith('/blog'), noArrow: true },
   ];
 
+
+  //handle pdf menu
+
+  const handlepdfmenu = ()=>{
+   const pdfurl = 'images/pdf/cakes.pdf'
+   window.open(pdfurl, '_blank');
+  }
   return (
     <>
       {/* Topbar with social icons and contact info (desktop only) */}
@@ -200,8 +207,13 @@ export default function Header() {
             ))}
           </nav>
 
+        
+
           {/* Search Icon - right side */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-10    ">
+            <div className=' px-2 py-2 rounded border border-[#ff3131] hidden md:hiden lg:block'> 
+          <button className='text-[#ff3131] cursor-pointer' onClick={handlepdfmenu}>Explore PDF Menu</button>
+          </div>
             <button
               className="p-2 rounded-md hover:bg-gray-100 transition-colors focus:outline-none"
               aria-label="Search"
