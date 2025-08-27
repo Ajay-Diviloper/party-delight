@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, ChevronDown, Search, Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import { Menu, X, ChevronDown, Search, Facebook, Instagram, MapPin, Phone, Mail, FileText } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -211,9 +211,16 @@ export default function Header() {
 
           {/* Search Icon - right side */}
           <div className="flex items-center gap-10    ">
-            <div className=' px-2 py-2 rounded border border-[#ff3131] hidden md:hiden lg:block'> 
-          <button className='text-[#ff3131] cursor-pointer' onClick={handlepdfmenu}>Explore PDF Menu</button>
-          </div>
+          <div className="hidden md:hidden lg:block">
+      <button
+        className="flex items-center gap-2 text-[#fff] cursor-pointer bg-[#ff3131] hover:bg-[#fff] hover:text-[#ff3131] hover:border transition-all duration-300 px-4 py-2 rounded-lg"
+        onClick={handlepdfmenu}
+      >
+        
+        <FileText className="w-5 h-5" /> {/* Add the PDF icon */}
+        Explore PDF Menu
+      </button>
+    </div>
             <button
               className="p-2 rounded-md hover:bg-gray-100 transition-colors focus:outline-none"
               aria-label="Search"
