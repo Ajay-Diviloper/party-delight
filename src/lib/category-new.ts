@@ -219,7 +219,7 @@ export const Category: Categories[] = [
   { 
     type: 'dessert',
     name: 'Cookies',
-    image: '/images/products-category-images/comingsoon.jpeg',
+    image: '/images/new-cat/Cookies.jpg',
     slug: 'cookies',
     description: 'Freshly baked cookies for every mood.',
     products: [
@@ -834,7 +834,7 @@ export const Category: Categories[] = [
   {
     type: 'dessert',
     name: 'Dessert Specials',
-    image: '/images/new-cat/dessert.webp',
+    image: '/images/new-cat/dessert_special.jpg',
     slug: 'dessert-specials',
     description: 'Unique limited-time dessert offerings.',
     products: [
@@ -1082,7 +1082,7 @@ export const Category: Categories[] = [
 {
   type: 'savoury',
   name: 'Munchables',
-  image: '/images/products-category-images/comingsoon.jpeg',
+  image: '/images/new-cat/munchables.jpg',
   slug: 'munchables',
   description: 'Snackable crackers and nuts to munch anytime.',
   products: [

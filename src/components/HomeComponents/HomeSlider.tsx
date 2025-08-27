@@ -171,7 +171,7 @@ fill
               href="/products"
               className="main-btn font-sans md:px-4 px-2 md:py-2 py-1 text-sm sm:text-base transition-colors !hover:bg-[#ff3131] bg-[#fff] hover:text-white inline-block text-center"
             >
-              Shop Now
+              View Menu
             </Link>
           </div>
         </motion.div>

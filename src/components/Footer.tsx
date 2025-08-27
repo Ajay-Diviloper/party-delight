@@ -42,14 +42,15 @@ import { Category } from '@/lib/category-new';
 // const slugify = (s: string) =>
 //   s.toLowerCase()
 //    .replace(/['’]/g, '')
-//    .replace(/\s+&\s+/g, '-and-')
+//    .replace(/\s+&\s+/g, '-and-') 
 //    .replace(/[^a-z0-9]+/g, '-')
 //    .replace(/^-+|-+$/g, '');
 
 export default function Footer() {
   return (
     <footer className="bg-white text-black border-t pt-15">
-      <div className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-5">
+      
         {/* Logo, Description, Social */}
         <div className='flex flex-col gap-2'>
           <Link href="/" className="flex items-center mb-4">
@@ -58,16 +59,16 @@ export default function Footer() {
               alt="Party Delights Logo"
               width={120}
               height={60}
-              className="mr-2"
+              className="mr-2 cursor-pointer hover:scale-105 transition-all"
             />
          
           </Link>
       
-          <p className="text-sm text-[#858585] mb-2 ">
-            Delighting your parties with fresh bakes every day! <br/> Experience the taste of happiness with our handcrafted treats.
+          <p className="text-sm text-[#858585] mb-2 w-[90%] ">
+            Delighting your parties with fresh bakes every day! Experience the taste of happiness with our handcrafted treats.
           </p>
 
-          <ul className="space-y-6 text-sm font-sans text-[#858585] mt-2.5">
+          <ul className="space-y-4 text-sm font-sans text-[#858585] mt-2.5">
             <li className="flex items-start gap-2">
               <MapPin className="w-5 h-5 mt-0.6 text-[#ff3131]" />
               <span>6638 152A St #115, Surrey, BC V3S 5X5</span>
@@ -98,7 +99,7 @@ export default function Footer() {
         <div className="md:col-span-2">
       
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-[60%_40%] sm:grid-cols-2 gap-8">
             {/* Desserts group */}
             <div>
               <h4 className="text-[18px] font-heading text-[#ff3131] mb-2 font-semibold">Desserts</h4>
@@ -118,7 +119,7 @@ export default function Footer() {
             {/* Savoury group */}
             <div>
               <h4 className="text-[18px] font-heading text-[#ff3131] mb-2 font-semibold">Savoury</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-8">
+              <div className="grid grid-cols-1 sm:grid-cols-1 gap-y-2 gap-x-8">
         {Category.filter(cat => cat.type === "savoury").map(cat => (
       <Link
         key={cat.name}
@@ -141,6 +142,27 @@ export default function Footer() {
         </div>
 
         {/* (Optional) another column for services or quick links */}
+
+        <div className='text-[18px] font-heading text-[#ff3131]  font-semibold'> 
+         <h2 className='mb-4'> Our Delivery Partner</h2>
+         <div className="flex flex-col gap-6">
+         <Link
+          href="https://gogreentechca.com/" // 👈 replace with actual website
+          target="_blank"
+          rel="noopener noreferrer"
+          className=""
+        >
+        <Image
+          src="/images/logo-go-green/logo-go-green.svg" // 👈 replace with your partner logo path
+          alt="Swiggy"
+          width={112}  // ~28 in Tailwind (28 * 4 = 112px)
+          height={112}
+          className="object-contain hover:scale-105 transition-all cursor-pointer"
+        />
+        <p className="text-base font-medium hover:text-[#5C4033]  text-[#858585] cursor-pointer">GoGreen Technologies Corp</p>
+</Link>
+      </div>
+        </div>
         <div />
       </div>
 
