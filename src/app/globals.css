@@ -75,13 +75,6 @@ body {
 /* p{
   color: #858585;
 } */
-
-@media(max-width: 768px){
-  .main-btn {
-    padding: 10px 20px !important;
-  }
-}
-
 .main-btn {
   font-weight: 600;
   text-transform: uppercase;
@@ -90,10 +83,18 @@ body {
   border-style: solid;
   border-width: 1px;
   border-color: #fff;
-  padding: 15px 40px;
+  
   color: #fff;
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
+
+@media(max-width: 768px){
+  /* .main-btn {
+    padding: 5px 20px !important;
+  } */
+}
+
+
 .main-btn:hover {
   background-color: #ff3131 !important;
   border-color: #ff3131;

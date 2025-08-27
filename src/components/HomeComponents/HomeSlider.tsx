@@ -10,29 +10,27 @@ const slides = [
   {
     id: 1,
     image: '/images/slider/Media.jpg',
-    tabletImage: '/images/tab-front.jpeg', // 👈 tablet version
+    tabletImage: '/images/tab-front.jpeg',
     alt: 'Handcrafted cookies and treats',
-    title: 'Sweet Moments, Every Day',
+    title: 'Sweet Moments for Every Day',
     subtitle:
-      'Indulge in Our Handcrafted Treats, Made With Love and the Finest Ingredients.',
+      'Enjoy handcrafted treats made with love, care, and the finest ingredients daily.',
   },
   {
     id: 2,
     image: '/images/slider/innerview.jpg',
-    // tabletImage: '/images/slider/innerview-tablet.jpg',
     alt: 'Celebration cakes and pastries',
-    title: 'Celebrate Every Occasion Deliciously',
+    title: 'Delicious Celebrations Made Special',
     subtitle:
-      'From Birthdays to Weddings, Our Bakery Adds a Special Touch to Your Celebrations.',
+      'From birthdays to weddings, we add sweetness, elegance, and joy to your occasions.',
   },
   {
     id: 3,
     image: '/images/slider/inner.jpg',
-    // tabletImage: '/images/slider/inner-tablet.jpg',
     alt: 'Artisan bakery creations',
-    title: 'Experience the Art of Baking',
+    title: 'Discover the Art of Baking',
     subtitle:
-      'Discover a World of Flavors, Textures, and Unforgettable Desserts.',
+      'Explore rich flavors, unique textures, and desserts crafted to delight every moment.',
   },
 ];
 
@@ -90,7 +88,7 @@ const HomeSlider = () => {
   };
 
   return (
-    <div className="relative w-full h-[45vh] sm:h-[50vh] md:h-[50vh] lg:h-[90vh] overflow-hidden">
+    <div className="relative w-full h-[400px] sm:h-[50vh] md:h-[50vh] lg:h-[90vh] overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-black/100 via-black/100 to-black/100 z-0"></div>
 
       <AnimatePresence mode="wait" custom={direction}>
@@ -152,7 +150,7 @@ fill
            
             />
             <div
-              className="md:text-[3em] lg:text-[4em] text-[2em] py-2 font-heading mb-2 w-full drop-shadow-lg animate-fadeInUp leading-tight"
+              className="md:text-[3em] lg:text-[4em] text-[1.8em] py-2 font-heading mb-2 w-full drop-shadow-lg animate-fadeInUp leading-tight"
               style={{
                 wordBreak: 'normal',
                 whiteSpace: 'normal',
@@ -169,9 +167,9 @@ fill
 
             <Link
               href="/products"
-              className="main-btn font-sans md:px-4 px-2 md:py-2 py-1 text-sm sm:text-base transition-colors !hover:bg-[#ff3131] bg-[#fff] hover:text-white inline-block text-center"
+              className="main-btn font-sans md:px-6 px-2 md:py-4 py-2 text-sm sm:text-base transition-colors !hover:bg-[#ff3131] bg-[#fff] hover:text-white inline-block text-center"
             >
-              View Menu
+              VIEW MENU
             </Link>
           </div>
         </motion.div>
