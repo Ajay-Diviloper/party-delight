@@ -13,6 +13,8 @@ export default function Header() {
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
   const [isDessertTab, setIsDessertTab] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
 
   // Use Category from category-new for search
@@ -58,7 +60,7 @@ export default function Header() {
   //handle pdf menu
 
   const handlepdfmenu = ()=>{
-   const pdfurl = 'images/pdf/cakes.pdf'
+   const pdfurl = '/images/pdf/cakes.pdf'
    window.open(pdfurl, '_blank');
   }
   return (
@@ -130,82 +132,91 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Desktop Navigation - hidden on mobile */}
-          <nav className="hidden lg:flex items-center gap-8 text-[18px] font-heading relative">
-            {navItems.map((item) => (
-              item.subItems ? (
-                <div key={item.label} className="group relative">
-                  <NavLink
-                    href={item.href}
-                    label={item.label}
-                    current={item.current}
-                  />
-                  {/* Dropdown with tabs for Dessert and Savoury */}
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-[#faf9f7] shadow-2xl border border-gray-200 mt-3 rounded-2xl z-[9999] transition-all duration-200 ease-in-out min-w-[900px] max-w-[1200px] px-10 pt-6 pb-6 flex flex-col items-center" style={{background: '#faf9f7'}}>
-                    {/* Dropdown Arrow */}
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 overflow-hidden">
-                      <div className="w-6 h-6 bg-[#faf9f7] border-t border-l border-gray-200 rotate-45 shadow-md"></div>
-                    </div>
-                    {/* Tab Bar */}
-                    <div className="flex justify-center items-center gap-2 mb-2 w-full">
-                      <button
-                        className={`px-8 py-2 rounded-full font-semibold text-base transition-colors duration-200 shadow-sm border-2 ${isDessertTab ? 'bg-[#ff3131] text-white border-[#ff3131]' : 'bg-white text-[#ff3131] border-[#ff3131]'}`}
-                        onMouseEnter={() => setIsDessertTab(true)}
-                        onFocus={() => setIsDessertTab(true)}
-                        type="button"
-                        style={{minWidth: 120}}
-                      >
-                        Dessert
-                      </button>
-                      <button
-                        className={`px-8 py-2 rounded-full font-semibold text-base transition-colors duration-200 shadow-sm border-2 ${!isDessertTab ? 'bg-[#ff3131] text-white border-[#ff3131]' : 'bg-white text-[#ff3131] border-[#ff3131]'}`}
-                        onMouseEnter={() => setIsDessertTab(false)}
-                        onFocus={() => setIsDessertTab(false)}
-                        type="button"
-                        style={{minWidth: 120}}
-                      >
-                        Savoury
-                      </button>
-                    </div>
-                    {/* Floating Label */}
-                    {/* <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-white text-[#ff3131] font-semibold text-base px-5 py-2 rounded-xl shadow border border-[#ff3131] font-heading" style={{zIndex: 2}}>
-                      Categories
-                    </span> */}
-                    {/* Category Grid */}
-                    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6 w-full justify-items-center mt-6">
-                      {(isDessertTab ? Category.filter(cat => cat.type === 'dessert') : Category.filter(cat => cat.type === 'savoury')).map(cat => (
-                        <Link
-                          key={cat.slug}
-                          href={`/category/${cat.slug}`}
-                          className="flex flex-col items-center justify-center gap-2 p-3 rounded-xl bg-white border border-gray-200 hover:border-[#ff3131] shadow hover:shadow-lg transition-all duration-200 w-32 h-36"
-                          style={{ textAlign: 'center' }}
-                        >
-                          <div className="rounded-lg bg-[#ff3131] group-hover:bg-white transition-all flex items-center justify-center w30 h-30 mb-1 overflow-hidden">
-                            <Image
-                              src={cat.image}
-                              alt={cat.name}
-                              width={74}
-                              height={74}
-                              className="object-contain w-36 h-36"
-                            />
-                          </div>
-                          <span className="font-medium text-[14px] text-gray-800 group-hover:text-[#ff3131] truncate w-full">{cat.name}</span>
-                        </Link>
-                      ))}
-                    </div>
+        {/* Desktop Navigation - hidden on mobile */}
+<nav className="hidden lg:flex items-center gap-8 text-[18px] font-heading relative">
+  {navItems.map((item) => (
+    item.subItems ? (
+      // 🔹 REPLACED 'group' with explicit state handling
+      <div
+        key={item.label}
+        className="relative"
+        onMouseEnter={() => setIsMenuOpen(true)} // 🔹 Open dropdown on hover
+        onMouseLeave={() => setIsMenuOpen(false)} // 🔹 Close dropdown when mouse leaves
+     onClick={() => setIsMenuOpen(false)} // Toggle on click for better mobile support
+     >
+        <NavLink
+          href={item.href}
+          label={item.label}
+          current={item.current}
+        />
+
+        {/* 🔹 Conditional render based on state */}
+        {isMenuOpen && (
+          <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-[#faf9f7] shadow-2xl border border-gray-200 mt-3 rounded-2xl z-[9999] transition-all duration-200 ease-in-out min-w-[900px] max-w-[1200px] px-10 pt-6 pb-6 flex flex-col items-center">
+            
+            {/* Dropdown Arrow */}
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 overflow-hidden">
+              <div className="w-6 h-6 bg-[#faf9f7] border-t border-l border-gray-200 rotate-45 shadow-md"></div>
+            </div>
+
+            {/* Tab Bar */}
+            <div className="flex justify-center items-center gap-2 mb-2 w-full">
+              <button
+                className={`px-8 py-2 rounded-full font-semibold text-base transition-colors duration-200 shadow-sm border-2 ${isDessertTab ? 'bg-[#ff3131] text-white border-[#ff3131]' : 'bg-white text-[#ff3131] border-[#ff3131]'}`}
+                onMouseEnter={() => setIsDessertTab(true)}
+                onFocus={() => setIsDessertTab(true)}
+                type="button"
+                style={{ minWidth: 120 }}
+              >
+                Dessert
+              </button>
+              <button
+                className={`px-8 py-2 rounded-full font-semibold text-base transition-colors duration-200 shadow-sm border-2 ${!isDessertTab ? 'bg-[#ff3131] text-white border-[#ff3131]' : 'bg-white text-[#ff3131] border-[#ff3131]'}`}
+                onMouseEnter={() => setIsDessertTab(false)}
+                onFocus={() => setIsDessertTab(false)}
+                type="button"
+                style={{ minWidth: 120 }}
+              >
+                Savoury
+              </button>
+            </div>
+
+            {/* Category Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6 w-full justify-items-center mt-6">
+              {(isDessertTab ? Category.filter(cat => cat.type === 'dessert') : Category.filter(cat => cat.type === 'savoury')).map(cat => (
+                <Link
+                  key={cat.slug}
+                  href={`/category/${cat.slug}`}
+                  onClick={() => setIsMenuOpen(false)} // 🔹 Close dropdown on click
+                  className="flex flex-col items-center justify-center gap-2 p-3 rounded-xl bg-white border border-gray-200 hover:border-[#ff3131] shadow hover:shadow-lg transition-all duration-200 w-32 h-36"
+                >
+                  <div className="rounded-lg bg-[#ff3131] group-hover:bg-white transition-all flex items-center justify-center w30 h-30 mb-1 overflow-hidden">
+                    <Image
+                      src={cat.image}
+                      alt={cat.name}
+                      width={74}
+                      height={74}
+                      className="object-contain w-36 h-36"
+                    />
                   </div>
-                </div>
-              ) : (
-                <NavLink
-                  key={item.label}
-                  href={item.href}
-                  label={item.label}
-                  current={item.current}
-                  noArrow={item.noArrow}
-                />
-              )
-            ))}
-          </nav>
+                  <span className="font-medium text-[14px] text-gray-800 group-hover:text-[#ff3131] truncate w-full">{cat.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    ) : (
+      <NavLink
+        key={item.label}
+        href={item.href}
+        label={item.label}
+        current={item.current}
+        noArrow={item.noArrow}
+      />
+    )
+  ))}
+</nav>
 
         
 
@@ -213,7 +224,7 @@ export default function Header() {
           <div className="flex items-center gap-10    ">
           <div className="hidden md:hidden lg:block">
       <button
-        className="flex items-center gap-2 text-[#fff] cursor-pointer bg-[#ff3131] hover:bg-[#fff] hover:text-[#ff3131] hover:border transition-all duration-300 px-4 py-2 rounded-lg"
+        className="flex items-center gap-2 text-[#fff] cursor-pointer bg-[#ff3131] hover:bg-[#fff] hover:text-[#ff3131]  border transition-all duration-300 px-4 py-2 rounded-lg"
         onClick={handlepdfmenu}
       >
         

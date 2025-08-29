@@ -11,7 +11,7 @@ const GetInTouch = () => (
       STAY IN TOUCH 
     </h2>
     <p className="text-white  !important text-base md:text-lg mb-6 max-w-2xl text-center font-sans z-10 animate-fadeInUp" style={{color: '#fff'}}>
-      Subscribe to our newsletter for exclusive offers, the latest updates, and sweet surprises delivered straight to your inbox!
+    Subscribe For Exclusive Offers, The Latest Updates, And Sweet Surprises Delivered Straight To Your Inbox!
     </p>
     <form className="flex w-full max-w-2xl justify-center px-4 md:px-0 z-10 animate-fadeInUp">
       <div className="flex flex-col md:flex-row w-full bg-white bg-opacity-90 rounded-lg shadow-lg overflow-hidden border-2 border-white/30">

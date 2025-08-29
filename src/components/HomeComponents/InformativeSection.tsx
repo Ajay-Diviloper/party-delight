@@ -44,9 +44,9 @@ const InformativeSection = () => {
           {/* CTA Button */}
           <Link
   href="/products"
-  className="main-btn font-sans md:px-4 px-2 md:py-2 py-1 text-sm sm:text-base transition-colors !hover:bg-[#ff3131] bg-[#fff] hover:text-white inline-block text-center"
+  className="border text-white hover:bg-[#ff3131] hover:border-[#ff3131]  font-sans md:px-8 px-4 md:py-3 py-2 text-sm sm:text-base transition-colors inline-block text-center"
 >
-  Shop Now
+  View Menu
 </Link>
         </div>
       </div>
@@ -54,8 +54,10 @@ const InformativeSection = () => {
       {/* Bottom Info Bar */}
       <div className="relative z-10 bg-black/40 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-          <div className="flex flex-col sm:flex-row md:justify-between justify-baseline  md:items-center  py-6 space-y-4 sm:space-y-0">
+          <div className="flex  sm:flex-row md:justify-center gap-10 justify-center items-center  py-6  sm:space-y-0">
             {/* Contact Info */}
+            <Link
+            href={'/contact'}>
             <div className="flex items-center md:justify-center justify-baseline sm:justify-start gap-3">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -70,11 +72,12 @@ const InformativeSection = () => {
               </svg>
               <span className="text-white font-sans text-sm md:text-base">Contact us</span>
             </div>
+            </Link>
 
             {/* Divider - Hidden on mobile */}
-            <div className="hidden sm:block text-white text-xl px-4">|</div>
+            {/* <div className="hidden sm:block text-white text-xl px-4">|</div> */}
 
-            {/* Shopping Online */}
+            {/* Shopping Online
             <div className="flex items-center md:justify-center justify-baseline sm:justify-start gap-3">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -88,12 +91,16 @@ const InformativeSection = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 9.75V6.75A4.5 4.5 0 0 0 12 2.25a4.5 4.5 0 0 0-4.5 4.5v3m13.5 0v7.5a2.25 2.25 0 0 1-2.25 2.25h-13.5A2.25 2.25 0 0 1 2.25 17.25v-7.5m16.5 0H2.25" />
               </svg>
               <span className="text-white font-sans text-sm md:text-base">Shopping Online</span>
-            </div>
+            </div> */}
 
             {/* Divider - Hidden on mobile */}
-            <div className="hidden sm:block text-white text-xl px-4">|</div>
+            <div className=" text-white text-xl px-4">|</div>
 
             {/* Store Location */}
+            <Link
+            target='#'
+            href='https://maps.app.goo.gl/Vxs2SKxLEQh2Bjp3A'>
+              
             <div className="flex items-center md:justify-center justify-baseline sm:justify-start gap-3">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -108,6 +115,7 @@ const InformativeSection = () => {
               </svg>
               <span className="text-white font-sans text-sm md:text-base">Store Location</span>
             </div>
+            </Link>
           </div>
         </div>
       </div>

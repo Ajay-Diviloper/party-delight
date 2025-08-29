@@ -167,8 +167,9 @@ fill
 
             <Link
               href="/products"
-              className="main-btn font-sans md:px-6 px-2 md:py-4 py-2 text-sm sm:text-base transition-colors !hover:bg-[#ff3131] bg-[#fff] hover:text-white inline-block text-center"
+               className="border text-white hover:bg-[#ff3131] hover:border-[#ff3131]  font-sans md:px-8 px-4 md:py-3 py-2 text-sm sm:text-base transition-colors inline-block text-center"
             >
+
               VIEW MENU
             </Link>
           </div>

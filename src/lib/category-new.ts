@@ -606,63 +606,63 @@ export const Category: Categories[] = [
     ]
   },
   
-  {
-    type: 'dessert',
-    name: 'Signature Delights',
-    image: '/images/products-category-images/comingsoon.jpeg',
-    slug: 'signature-delights',
-    description: 'House specials and indulgent desserts.',
-    products: [
-      {
-        name: 'Crayzee Croffle',
-        image: '/images/products-category-images/comingsoon.jpeg',
-        price: '$9.50',
-        description: 'A buttery croissant-waffle hybrid served warm and finished with a sweet drizzle.'
-      },
-      {
-        name: 'Cream Caramel',
-        image: '/images/products-category-images/comingsoon.jpeg',
-        price: '$5.25',
-        description: 'Silky baked custard topped with glossy caramel sauce (crème caramel).'
-      },
-      {
-        name: 'Glowball Warming',
-        image: '/images/products-category-images/comingsoon.jpeg',
-        price: '$13.50',
-        description: 'A pour-over warm sauce melts a chocolate shell to reveal a decadent dessert inside.'
-      },
-      {
-        name: 'Lava Cake',
-        image: '/images/products-category-images/comingsoon.jpeg',
-        price: '$12.50',
-        description: 'Warm chocolate cake with a rich molten center.'
-      },
-      {
-        name: 'Saffron Tres Leche',
-        image: '/images/products-category-images/comingsoon.jpeg',
-        price: '$6.25',
-        description: 'Soft sponge soaked in three milks, delicately infused with saffron.'
-      },
-      {
-        name: 'Signature Sticky Buns',
-        image: '/images/products-category-images/comingsoon.jpeg',
-        price: '$4.00',
-        description: 'Soft, gooey buns spiraled with cinnamon and glazed with caramel.'
-      },
-      {
-        name: 'Tiramisu',
-        image: '/images/products-category-images/comingsoon.jpeg',
-        price: '$6.25',
-        description: 'Coffee-soaked layers with whipped mascarpone and a dusting of cocoa.'
-      },
-      {
-        name: 'Baked Mini Donuts (6 Pack)',
-        image: '/images/products-category-images/comingsoon.jpeg',
-        price: '$6.00',
-        description: 'Oven-baked bite-size donuts, lightly sweet and perfect for sharing.'
-      }
-    ]
-  },
+  // {
+  //   type: 'dessert',
+  //   name: 'Signature Delights',
+  //   image: '/images/products-category-images/comingsoon.jpeg',
+  //   slug: 'signature-delights',
+  //   description: 'House specials and indulgent desserts.',
+  //   products: [
+  //     {
+  //       name: 'Crayzee Croffle',
+  //       image: '/images/products-category-images/comingsoon.jpeg',
+  //       price: '$9.50',
+  //       description: 'A buttery croissant-waffle hybrid served warm and finished with a sweet drizzle.'
+  //     },
+  //     {
+  //       name: 'Cream Caramel',
+  //       image: '/images/products-category-images/comingsoon.jpeg',
+  //       price: '$5.25',
+  //       description: 'Silky baked custard topped with glossy caramel sauce (crème caramel).'
+  //     },
+  //     {
+  //       name: 'Glowball Warming',
+  //       image: '/images/products-category-images/comingsoon.jpeg',
+  //       price: '$13.50',
+  //       description: 'A pour-over warm sauce melts a chocolate shell to reveal a decadent dessert inside.'
+  //     },
+  //     {
+  //       name: 'Lava Cake',
+  //       image: '/images/products-category-images/comingsoon.jpeg',
+  //       price: '$12.50',
+  //       description: 'Warm chocolate cake with a rich molten center.'
+  //     },
+  //     {
+  //       name: 'Saffron Tres Leche',
+  //       image: '/images/products-category-images/comingsoon.jpeg',
+  //       price: '$6.25',
+  //       description: 'Soft sponge soaked in three milks, delicately infused with saffron.'
+  //     },
+  //     {
+  //       name: 'Signature Sticky Buns',
+  //       image: '/images/products-category-images/comingsoon.jpeg',
+  //       price: '$4.00',
+  //       description: 'Soft, gooey buns spiraled with cinnamon and glazed with caramel.'
+  //     },
+  //     {
+  //       name: 'Tiramisu',
+  //       image: '/images/products-category-images/comingsoon.jpeg',
+  //       price: '$6.25',
+  //       description: 'Coffee-soaked layers with whipped mascarpone and a dusting of cocoa.'
+  //     },
+  //     {
+  //       name: 'Baked Mini Donuts (6 Pack)',
+  //       image: '/images/products-category-images/comingsoon.jpeg',
+  //       price: '$6.00',
+  //       description: 'Oven-baked bite-size donuts, lightly sweet and perfect for sharing.'
+  //     }
+  //   ]
+  // },
 
   {
     type: 'dessert',

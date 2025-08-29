@@ -265,8 +265,8 @@ const [categories, setCategories] = useState<Categories[]>([]);
                           src={category.image || "/images/icon/Group.png"}
                           alt={category.name}
                           width={260}
-                          height={200}
-                          className="object-cover rounded-lg mb-4 w-full h-56"
+                          height={300}
+                          className="object-cover rounded-lg mb-4 w-full h-74"
                         />
                         <div className="flex items-center justify-between w-full">
                           <h2 className="text-2xl font-serif font-semibold text-gray-900">
@@ -331,7 +331,7 @@ const [categories, setCategories] = useState<Categories[]>([]);
                                    alt={product.name}
                                    width={180}
                                    height={140}
-                                   className="object-cover w-full h-36 rounded-t-lg"
+                                   className="object-cover w-full h-52 rounded-t-lg"
                                  />
                                  {/* <div className="absolute top-2 right-2">
                                    <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">
@@ -419,7 +419,7 @@ const [categories, setCategories] = useState<Categories[]>([]);
   alt={product.name}
   width={200}
   height={150}
-  className="object-cover object-[center_30%] w-full h-48 rounded-t-lg"
+  className="object-cover object-[center_30%] w-full h-64 rounded-t-lg"
 />
                        {/* <div className="absolute top-2 right-2">
                          <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">

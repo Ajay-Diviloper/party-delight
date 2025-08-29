@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facebook, Instagram, Phone, Mail, MapPin } from 'lucide-react';
-import WhatsAppButton from './WhatsAppButton';
+//import WhatsAppButton from './WhatsAppButton';
 import { Category } from '@/lib/category-new';
 
 // import { categories } from "@/lib/categories-data"; // not needed for grouped footer
@@ -69,10 +69,17 @@ export default function Footer() {
           </p>
 
           <ul className="space-y-4 text-sm font-sans text-[#858585] mt-2.5">
-            <li className="flex items-start gap-2">
-              <MapPin className="w-5 h-5 mt-0.6 text-[#ff3131]" />
-              <span>6638 152A St #115, Surrey, BC V3S 5X5</span>
-            </li>
+          <li className="flex items-start gap-2">
+  <a
+    href="https://maps.app.goo.gl/Vxs2SKxLEQh2Bjp3A"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-start gap-2"
+  >
+    <MapPin className="w-5 h-5 mt-0.5 text-[#ff3131]" />
+    <span>6638 152A St #115, Surrey, BC V3S 5X5</span>
+  </a>
+</li>
             <li className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-[#ff3131]" />
               <a href="mailto:partydelightsca@outlook.com" className="hover:underline">partydelightsca@outlook.com</a>
@@ -159,7 +166,7 @@ export default function Footer() {
           height={112}
           className="object-contain hover:scale-105 transition-all cursor-pointer"
         />
-        <p className="text-base font-medium hover:text-[#5C4033]  text-[#858585] cursor-pointer">GoGreen Technologies Corp</p>
+        <div className=" font-inter text-sm font-normal mt-3 hover:text-[#5C4033]  text-[#858585] cursor-pointer ">GoGreen Technologies Corp</div>
 </Link>
       </div>
         </div>
@@ -185,7 +192,7 @@ export default function Footer() {
       </div>
 
       {/* Fixed WhatsApp Button on Left Side */}
-      <WhatsAppButton size="md" phoneNumber="+1(604) 593-0080" fixedLeft />
+      {/* <WhatsAppButton size="md" phoneNumber="+1(604) 593-0080" fixedLeft /> */}
     </footer>
   );
 }
