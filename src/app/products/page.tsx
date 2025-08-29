@@ -256,7 +256,17 @@ const [categories, setCategories] = useState<Categories[]>([]);
                 <React.Fragment key={category.name}>
                   {!expandedCategories.includes(category.name) ? (
                     <div
-                      onClick={() => openCategoryProductsModal(category)}
+                    onClick={() => {
+    if (category.name.toLowerCase() === "cakes") {
+      // 👇 navigate to cakes page
+      window.location.href = "/cakes"; 
+      // or if you're using Next.js Router:
+      // router.push("/cakes")
+    } else {
+      // 👇 open modal for other categories
+      openCategoryProductsModal(category);
+    }
+  }}
                       className="border border-gray-200 rounded-lg overflow-hidden bg-white transition-shadow block hover:shadow-lg hover:scale-[1.02] focus:outline-none"
                       style={{ textDecoration: 'none' }}
                     >
