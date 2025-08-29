@@ -36,6 +36,10 @@
   font-family: var(--font-inter);
 }
 
+.mogontaga {
+  
+  font-family: var(--font-montaga);
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #121212;

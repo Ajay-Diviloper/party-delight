@@ -4,13 +4,14 @@ import { Category } from '@/lib/category-new';
 import Image from 'next/image';
 
 
-import Link from 'next/link';
+//import Link from 'next/link';
 
 export default function CakeGalleryPage() {
   const cakesCategory = Category.find(cat => cat.slug === 'cakes');
   const products = cakesCategory?.products || [];
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   const openGallery = (idx: number) => {
     setCurrent(idx);
@@ -24,42 +25,97 @@ export default function CakeGalleryPage() {
     return <div>No cakes found.</div>;
   }
 
+
+    
+  //   const handleSelect = (index: number) => {
+  //   setSelectedIndex(index === selectedIndex ? null : index); // toggle on same click
+  // };
+
   return (
-    <div className="flex container mx-auto py-10 px-4 gap-8">
+    <div className=' mx-auto py-10 px-4 gap-8"'> 
+      <section className="w-full flex flex-col items-center justify-center">
+        <h1 className="text-3xl md:text-4xl font-heading font-normal text-gray-900 mb-4">Explore Our Cakes Gallery</h1>
+        {/* <h2 className="text-lg md:text-xl text-gray-700 text-center mb-2 font-medium">Delightful Cakes for Every Occasion</h2> */}
+        {/* <p className="max-w-2xl text-center text-gray-500 mb-2 px-2 md:px-0">
+          Discover our curated selection of cakes, each crafted with passion and the finest ingredients. Whether you crave classic flavors or unique creations, our gallery has something to satisfy every sweet tooth. Click on any cake to see its details, price, and available variants.
+        </p> */}
+        {/* <div className="w-24 h-1 bg-[#ff3131] rounded-full mt-2 mb-2"></div> */}
+      </section>
+    <div className="flex flex-col md:flex-row container mx-auto py-10 px-4 gap-8">
+
         
       {/* Sidebar with cake names and details */}
-        <aside className="w-80 min-w-[320px] bg-gradient-to-br from-[#fff0f0] via-[#ffe5e5] to-[#ffd6d6] rounded-2xl shadow-xl p-6 h-fit sticky top-8 self-start border border-[#ff3131]/20">
-          <h2 className="text-2xl font-extrabold mb-6 text-[#ff3131] tracking-wide text-center drop-shadow">🍰 Cake List</h2>
-          <ul className="space-y-3">
-            {products.map((product, idx) => (
-              <li key={idx}>
-                <Link href={`/products/${encodeURIComponent(product.slug || product.name.replace(/\s+/g, '-').toLowerCase())}`}
-                  className="block p-3 rounded-xl bg-white/70 hover:bg-[#ff3131]/10 transition font-semibold text-base text-[#ff3131] shadow hover:shadow-lg border border-transparent hover:border-[#ff3131]/30"
-                >
-                  <span className="truncate block">{product.name}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </aside>
+        <div className="flex flex-col lg:flex-row gap-6">
+           <aside className="md:w-60 lg:w-80 w-full   bg-gradient-to-br from-[#fff0f0] via-[#ffe5e5] to-[#ffd6d6] rounded-2xl shadow-xl p-6 sticky top-8 self-start border border-[#ff3131]/20">
+        <h2 className="text-2xl font-extrabold mb-6 text-[#ff3131] tracking-wide text-center drop-shadow">🍰 Cakes List</h2>
+        <ul className="space-y-3">
+          {products.map((product, idx) => (
+            <li key={idx}>
+              <button
+                onClick={() => setSelectedIndex(idx)}
+                className={`w-full text-left block p-3 rounded-xl font-semibold text-base shadow transition-all duration-200
+                  ${selectedIndex === idx 
+                    ? 'bg-[#ff3131]/20  text-[#ff3131]' 
+                    : 'bg-white/70 border-transparent text-[#ff3131] hover:bg-[#ff3131]/10 hover:shadow-lg '}`}
+              >
+                <span className="truncate">{product.name}</span>
+              </button>
+              {selectedIndex === idx && (
+                <div className="mt-4 bg-white/80 rounded-xl p-4 shadow-inner border border-gray-200">
+                  {/* <div className="relative w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      priority
+                    />
+                  </div> */}
+                  {/* <h3 className="text-xl font-bold text-[#ff3131] mb-1">{product.name}</h3> */}
+                  {product.description && (
+                    <p className="text-gray-700 mb-1">{product.description}</p>
+                  )}
+                  {product.price && (
+                    <p className="text-base font-semibold text-gray-900 mb-1">Price: {product.price}</p>
+                  )}
+                  {product.variants && Array.isArray(product.variants) && product.variants.length > 0 && (
+                    <div className="mt-2 w-full">
+                      <h4 className="font-semibold text-gray-800 mb-1">Variants:</h4>
+                      <ul className="list-disc list-inside text-gray-700">
+                        {product.variants.map((v, i: number) => (
+                          <li key={i}>{v.label}: {v.price}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </aside>
 
+          
+
+</div>
       {/* Main gallery grid */}
       <div className="flex-1">
        
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {products.map((product, idx) => (
               <button
                 key={idx}
-                className="group bg-white rounded-2xl shadow-xl p-4 flex flex-col items-center focus:outline-none border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-200"
+                className="group rounded shadow-xl  flex flex-col items-center focus:outline-none hover:shadow-2xl hover:-translate-y-1 transition-all duration-200"
                 onClick={() => openGallery(idx)}
                 aria-label={`Open gallery for ${product.name}`}
               >
-                <div className="relative w-full h-56 overflow-hidden rounded-xl">
+                <div className="relative w-full h-60 overflow-hidden">
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300 rounded-xl"
                     sizes="(max-width: 768px) 100vw, 33vw"
                     priority={idx < 3}
                   />
@@ -112,6 +168,7 @@ export default function CakeGalleryPage() {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 }
