@@ -186,7 +186,7 @@ export default function Header() {
               {(isDessertTab ? Category.filter(cat => cat.type === 'dessert') : Category.filter(cat => cat.type === 'savoury')).map(cat => (
                 <Link
                   key={cat.slug}
-                  href={`/category/${cat.slug}`}
+                  href={cat.slug.toLowerCase() === "cakes" ? "/cakes" : `/category/${cat.slug}`}
                   onClick={() => setIsMenuOpen(false)} // 🔹 Close dropdown on click
                   className="flex flex-col items-center justify-center gap-2 p-3 rounded-xl bg-white border border-gray-200 hover:border-[#ff3131] shadow hover:shadow-lg transition-all duration-200 w-32 h-36"
                 >

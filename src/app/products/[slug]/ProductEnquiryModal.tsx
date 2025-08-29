@@ -19,7 +19,7 @@ const ProductEnquiryModal: React.FC<ProductEnquiryModalProps> = ({ productName }
         Product Enquiry
       </button>
       {showModal && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/40">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/40 px-4">
           <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md relative">
             <button
               className="absolute top-3 right-3 text-2xl text-grey hover:text-[#ff3131] focus:outline-none"

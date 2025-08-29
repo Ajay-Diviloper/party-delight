@@ -1068,10 +1068,12 @@ export const Category: Categories[] = [
       name: 'Mac n’ Cheese',
       image: '/images/products-category-images/comingsoon.jpeg',
       price: '$7.50',
+      slug: 'mac-n-cheese',
       description: 'Creamy baked macaroni with a crispy cheese crust.'
     },
     {
       name: 'Cheesy Jalapeño Swirls',
+      slug : 'cheesy-jalapeno-swirls',
       image: '/images/products-category-images/comingsoon.jpeg',
       price: '$4.00',
       description: 'Savory pastry spirals with cheddar and jalapeños.'
