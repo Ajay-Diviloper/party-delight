@@ -40,7 +40,7 @@ export const Category: Categories[] = [
     products: [
       {
         name: 'Berry Chantilly',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cake/chocolate n vanilla/Chocolate-and-Vanilla3.jpg',
         price: '$6.50 - $65.00',
         description: 'Vanilla sponge layered with fresh berries and Chantilly cream.',
         variants: [
@@ -52,7 +52,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Carrot Cake',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cake/cookie n cream/Cookie-n-Cream3.jpg',
         price: '$6.50 - $65.00',
         description: 'Moist spiced carrot cake with walnuts and cream cheese frosting.',
            variants: [
@@ -64,7 +64,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Chocolate Mint Cake',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cake/specialty cakes/Paw-Patrol3.jpg',
         price: '$6.50 - $65.00',
         description: 'Rich chocolate layers filled with cool mint buttercream.',
         variants: [
@@ -76,7 +76,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Coffee Lover’s Delight',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cake/cookie n cream/Cookie-n-Cream5.jpg',
         slug : 'coffee-lovers-delight',
         price: '$6.50 - $65.00',
         description: 'Espresso-soaked mocha sponge finished with coffee cream.',
@@ -89,7 +89,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Cookie Monster',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cake/cookie n cream/Cookie-n-Cream1.jpg',
         price: '$6.50 - $65.00',
         description: 'Chocolate chip–studded cake with cookie crumble frosting.',
            variants: [
@@ -101,7 +101,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Chocolate Fudge',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cake/chocolate n vanilla/Chocolate-and-Vanilla.jpg',
         price: '$6.50 - $65.00',
         description: 'Dense chocolate cake covered in silky fudge icing.',
            variants: [
@@ -113,7 +113,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Dulce de Leche',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cake/flavours/Dulce-de-Leche1.jpg',
         price: '$6.50 - $65.00',
         description: 'Caramel-infused sponge with a dulce de leche filling.',
            variants: [
@@ -482,37 +482,37 @@ export const Category: Categories[] = [
     products: [
       {
         name: 'Bunny in a Burrow',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/new-cat/Cake Jars.webp',
         price: '$7.25',
         description: 'Moist carrot cake with silky cream cheese frosting.'
       },
       {
         name: 'Dawn Till Dusk',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/new-cat/Cake Jars.webp',
         price: '$7.25',
         description: 'Vanilla sponge layered with chocolate mousse and fudge.'
       },
       {
         name: 'I Am Groot',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/new-cat/Cake Jars.webp',
         price: '$7.25',
         description: 'Rich chocolate cake, whipped ganache, and cookie crumble.'
       },
       {
         name: 'Naughty Mango',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/new-cat/Cake Jars.webp',
         price: '$7.25',
         description: 'Mango sponge with mango cream and juicy pulp.'
       },
       {
         name: 'Northern Lights',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/new-cat/Cake Jars.webp',
         price: '$7.25',
         description: 'Vanilla cake with blueberry compote and cream.'
       },
       {
         name: 'Pie in a Jar',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/new-cat/Cake Jars.webp',
         price: '$7.25',
         description: 'Buttery crumble, fruit compote, and vanilla cream.'
       }
@@ -575,7 +575,7 @@ export const Category: Categories[] = [
     products: [
       {
         name: 'Blueberry',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cheesecakes/Blueberry-cheesecake2.jpg',
         price: '$6.50',
         description: 'Creamy cheesecake topped with blueberry compote.'
       },
@@ -593,7 +593,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Biscoff',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cheesecakes/biscoff1.jpg',
         price: '$6.50',
         description: 'Cookie butter swirl finished with Biscoff crumble.'
       },
@@ -674,24 +674,28 @@ export const Category: Categories[] = [
       {
         name: 'Chocolate & Cranberry (Pack of 10)',
         image: '/images/products-category-images/comingsoon.jpeg',
+        slug: 'chocolate-cranberry-pack-of-10',
         price: '$10.00',
         description: 'Cocoa biscotti studded with tart dried cranberries.'
       },
       {
         name: 'Chocolate & Orange (Pack of 10)',
         image: '/images/products-category-images/comingsoon.jpeg',
+        slug: 'chocolate-orange-pack-of-10',
         price: '$10.00',
         description: 'Dark chocolate biscotti brightened with orange zest.'
       },
       {
         name: 'Spiced Almond (Pack of 10)',
         image: '/images/products-category-images/comingsoon.jpeg',
+        slug: 'spiced-almond-pack-of-10',
         price: '$10.00',
         description: 'Roasted almond biscotti with warm spice notes.'
       },
       {
         name: 'Cardamom, Pistachio & Rose (Pack of 10)',
         image: '/images/products-category-images/comingsoon.jpeg',
+        slug: 'cardamom-pistachio-rose-pack-of-10',
         price: '$10.00',
         description: 'Fragrant cardamom biscotti with pistachios and a hint of rose.'
       }
@@ -776,7 +780,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Blonde Bee Sting Bar',
-        image: '/images/new-cat/bar.jpg',
+        image: '/images/Dessert/bars/Blondee-bee-sting2.jpg',
         price: '$4.25',
         description: 'Honey-kissed blondie topped with toasted almonds.'
       },
@@ -804,19 +808,19 @@ export const Category: Categories[] = [
     products: [
       {
         name: 'BC Bliss',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/brownies/BC-Bliss1.jpg',
         price: '$4.25',
         description: 'Classic fudgy brownie with rich cocoa and a hint of sea salt.'
       },
       {
         name: 'Canadian Rockies',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/brownies/Canadian-Rockies3.jpg',
         price: '$4.25',
         description: 'Rocky-road inspired brownie with soft bites and chocolate chunks.'
       },
       {
         name: 'Pecan Brownie',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/brownies/Pecan-Brownie3.jpg',
         price: '$4.25',
         description: 'Fudgy chocolate brownie folded with toasted pecans.'
       },
@@ -864,7 +868,7 @@ export const Category: Categories[] = [
     products: [
       {
         name: 'Plain Croissant',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Savoury/Croissants/Plain Croissant/Croissants-2.jpg',
         price: '$3.50',
         description: 'Classic buttery, flaky croissant baked golden.'
       },
@@ -876,13 +880,13 @@ export const Category: Categories[] = [
       },
       {
         name: 'Chicken Croissant',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Savoury/Croissants/Chicken Croissant/DSC01007.jpg',
         price: '$6.25',
         description: 'Buttery croissant stuffed with herbed chicken filling.'
       },
       {
         name: 'Tuna Croissant',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Savoury/Croissants/Tuna Croissant/IMG_4868.jpg',
         price: '$7.25',
         description: 'Flaky croissant filled with seasoned tuna and light mayo.'
       },
@@ -895,7 +899,7 @@ export const Category: Categories[] = [
       {
         name: 'Croishouka (2pc + Salad + Fries)',
         slug: 'croishouka',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Savoury/Croissants/Croishouka/DSC01150.jpg',
         price: '$7.50',
         description: 'Two croissant pockets served with fresh salad and crispy fries.'
       }
@@ -911,7 +915,7 @@ export const Category: Categories[] = [
     products: [
       {
         name: 'Chicken Sandwich',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Savoury/Grilled Sandwiches/Chicken Sandwich/Chicken-Sandwich.jpg',
         price: '$9.50',
         description: 'Grilled chicken, lettuce, and creamy sauce on toasted bread.'
       },
@@ -1014,7 +1018,7 @@ export const Category: Categories[] = [
   products: [
     {
       name: 'Chicken Wrap',
-      image: '/images/products-category-images/comingsoon.jpeg',
+      image: '/images/Savoury/Wraps/Chicken Wrap/DSC01395.jpg',
       price: '$9.50',
       description: 'Grilled chicken, fresh veggies, and house sauce in a warm tortilla.'
     },
@@ -1042,25 +1046,25 @@ export const Category: Categories[] = [
   products: [
     {
       name: 'Chicken Pockets',
-      image: '/images/products-category-images/comingsoon.jpeg',
+      image: '/images/Savoury/Specials/Chicken Pockets/Chicken-Pockets.jpg',
       price: '$5.25',
       description: 'Flaky pastry pockets stuffed with seasoned chicken.'
     },
     {
       name: 'Chicken Sausage Rolls',
-      image: '/images/products-category-images/comingsoon.jpeg',
+      image: '/images/Savoury/Specials/Chicken Sausage Rolls/DSC01076.jpg',
       price: '$4.25',
       description: 'Golden-baked rolls filled with spiced chicken sausage.'
     },
     {
       name: 'Chicken Waffle with Cheese',
-      image: '/images/products-category-images/comingsoon.jpeg',
+      image: '/images/Savoury/Specials/Chicken Waffle/DSC01682.jpg',
       price: '$9.25',
       description: 'Crispy waffle topped with chicken and melted cheese.'
     },
     {
       name: 'Dynamite Chicken Strudel',
-      image: '/images/products-category-images/comingsoon.jpeg',
+      image: '/images/Savoury/Specials/Dynamite strudel/DSC01994.jpg',
       price: '$5.25',
       description: 'Buttery strudel layered with a spicy chicken filling.'
     },
@@ -1102,7 +1106,7 @@ export const Category: Categories[] = [
     },
     {
       name: 'Spiced Mix Nuts',
-      image: '/images/products-category-images/comingsoon.jpeg',
+      image: '/images/Savoury/Munchables/Spiced mixed nuts/DSC02452.jpg',
       price: '$5.50',
       description: 'Roasted assorted nuts tossed in house spice blend.'
     }

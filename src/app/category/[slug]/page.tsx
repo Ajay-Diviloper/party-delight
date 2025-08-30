@@ -63,14 +63,14 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                 <Link
                   key={product.name || idx}
                   href={`/products/${slugified}`}
-                  className="border border-gray-200 rounded-lg overflow-hidden bg-white transition-shadow block hover:shadow-lg hover:scale-[1.02] focus:outline-none"
+                  className="border border-gray-200 rounded-lg overflow-hidden bg-white block hover:shadow-lg hover:scale-[1.02] transition focus:outline-none"
                 >
                   <Image
                     src={product.image}
                     alt={product.name}
                     width={400}
                     height={200}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-68 object-cover"
                   />
                   <div className="p-4 flex-1 flex flex-col">
                 

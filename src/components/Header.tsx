@@ -340,56 +340,71 @@ export default function Header() {
           <div className="flex flex-col h-[calc(90vh-64px)] overflow-y-auto z-10">
             <nav className="flex-1 p-4">
               <ul className="space-y-2">
-                {navItems.map((item) => (
-                  <li key={item.label}>
-                    {item.subItems ? (
-                      <details className="group">
-                        <summary className="flex items-center justify-between py-3 px-2 rounded-lg hover:bg-gray-50 cursor-pointer list-none">
+                {/* Home */}
+                <li>
+                  <Link
+                    href="/"
+                    className={`block py-3 px-2 rounded-lg text-lg font-heading transition-colors ${
+                      pathname === '/' ? 'text-[#ff3131] bg-red-50' : 'text-gray-700 hover:text-[#ff3131] hover:bg-gray-50'
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Home
+                  </Link>
+                </li>
+                {/* Menu (categories from category-new.ts) */}
+                <li>
+                  <details className="group">
+                    <summary className="flex items-center justify-between py-3 px-2 rounded-lg hover:bg-gray-50 cursor-pointer list-none">
+                      <span className={`text-lg font-heading ${pathname.startsWith('/products') ? 'text-[#ff3131]' : 'text-gray-700'}`}>Menu</span>
+                      <ChevronDown className="w-5 h-5 text-[#ff3131] group-open:rotate-180 transition-transform" />
+                    </summary>
+                    <ul className="pl-4 mt-2 space-y-2">
+                      {Category.map((cat) => (
+                        <li key={cat.slug}>
                           <Link
-                            href={item.href}
-                            className={`text-lg font-heading ${item.current ? 'text-[#ff3131]' : 'text-gray-700'}`}
+                            href={cat.slug.toLowerCase() === 'cakes' ? '/cakes' : `/category/${cat.slug}`}
+                            className="flex items-center gap-3 py-2 px-2 rounded-lg hover:bg-gray-50 text-[#ff3131] hover:text-[#a05d2c] transition-colors"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
-                            {item.label}
+                            <Image
+                              src={cat.image}
+                              alt={cat.name}
+                              width={24}
+                              height={24}
+                              className="rounded object-contain bg-gray-100 border border-[#ff3131]"
+                            />
+                            <span className="text-sm font-medium">{cat.name}</span>
                           </Link>
-                          <ChevronDown className="w-5 h-5 text-[#ff3131] group-open:rotate-180 transition-transform" />
-                        </summary>
-                        <ul className="pl-4 mt-2 space-y-2">
-                          {item.subItems.map((cat) => (
-                            <li key={cat.slug}>
-                              <Link
-                                href={`/category/${cat.slug}`}
-                                className="flex items-center gap-3 py-2 px-2 rounded-lg hover:bg-gray-50 text-[#ff3131] hover:text-[#a05d2c] transition-colors"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                              >
-                                <Image
-                                  src={cat.image}
-                                  alt={cat.name}
-                                  width={24}
-                                  height={24}
-                                  className="rounded object-contain bg-gray-100 border border-[#ff3131]"
-                                />
-                                <span className="text-sm font-medium">{cat.name}</span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </details>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        className={`block py-3 px-2 rounded-lg text-lg font-heading transition-colors ${
-                          item.current
-                            ? 'text-[#ff3131] bg-red-50'
-                            : 'text-gray-700 hover:text-[#ff3131] hover:bg-gray-50'
-                        }`}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        {item.label}
-                      </Link>
-                    )}
-                  </li>
-                ))}
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </li>
+                {/* About */}
+                <li>
+                  <Link
+                    href="/about"
+                    className={`block py-3 px-2 rounded-lg text-lg font-heading transition-colors ${
+                      pathname.startsWith('/about') ? 'text-[#ff3131] bg-red-50' : 'text-gray-700 hover:text-[#ff3131] hover:bg-gray-50'
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    About
+                  </Link>
+                </li>
+                {/* Contact */}
+                <li>
+                  <Link
+                    href="/contact"
+                    className={`block py-3 px-2 rounded-lg text-lg font-heading transition-colors ${
+                      pathname === '/contact' ? 'text-[#ff3131] bg-red-50' : 'text-gray-700 hover:text-[#ff3131] hover:bg-gray-50'
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Contact
+                  </Link>
+                </li>
               </ul>
             </nav>
           <div className="border-t border-gray-200 bg-white px-6 py-5">

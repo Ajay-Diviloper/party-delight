@@ -72,16 +72,34 @@ const CategoriesComponent = () => {
               className="group relative bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               {/* Image Container */}
-              <div className="relative h-64 md:h-72 overflow-hidden">
-                <Image
+              <div className="relative h-72 md:h-78 overflow-hidden">
+
+                   {/* <Image
+                                    src={product.image}
+                                    alt={product.name}
+                                    width={400}
+                                    height={200}
+                                    className="w-full h-68 object-cover"
+                                  /> */}
+
+                                       <Image
+                                            src={cat.image}
+                                            alt={cat.name}
+                                              width={400}
+                                                                      height={200}
+                                                                       priority={idx < 3}
+                                                  className="w-full h-78 object-cover rounded-t-lg"
+                                          />
+                {/* <Image
                   src={cat.image}
                   alt={cat.name}
-                  fill
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
+              width={400}
+                                    height={300}
+                  className=" w-full h-78 object-cover object-center transition-transform duration-500 group-hover:scale-110"
                   priority={idx < 3}
-                />
+                /> */}
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" /> */}
                 
                 {/* Number Badge */}
                 {/* <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full w-8 h-8 flex items-center justify-center">

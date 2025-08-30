@@ -267,18 +267,18 @@ const [categories, setCategories] = useState<Categories[]>([]);
       openCategoryProductsModal(category);
     }
   }}
-                      className="border border-gray-200 rounded-lg overflow-hidden bg-white transition-shadow block hover:shadow-lg hover:scale-[1.02] focus:outline-none"
+                      className="border border-gray-200 rounded-t-lg overflow-hidden bg-white transition-shadow block hover:shadow-lg hover:scale-[1.02] focus:outline-none"
                       style={{ textDecoration: 'none' }}
                     >
-                      <div className="flex flex-col items-center p-6">
+                      <div className="flex flex-col items-center">
                         <Image
                           src={category.image || "/images/icon/Group.png"}
                           alt={category.name}
                           width={260}
                           height={300}
-                          className="object-cover rounded-lg mb-4 w-full h-74"
+                          className="object-cover rounded-t-lg mb-4 w-full h-74"
                         />
-                        <div className="flex items-center justify-between w-full">
+                        <div className="flex items-center justify-between w-full p-3">
                           <h2 className="text-2xl font-serif font-semibold text-gray-900">
                             {category.name}
                           </h2>

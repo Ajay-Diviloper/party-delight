@@ -61,6 +61,8 @@ USAGE EXAMPLES:
 />
 */
 
+import Link from "next/link";
+
 interface RotatingTextCircleProps {
   text?: string;
   fontSize?: number;
@@ -101,11 +103,13 @@ export default function RotatingTextCircle({
         </svg>
         
         {/* Center icon/text */}
+        <Link href="/cakes" aria-label="Explore our cakes" >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl md:text-4xl text-white animate-pulse">
             {centerIcon}
           </div>
         </div>
+        </Link>
         
         {/* Custom animation CSS */}
         <style>

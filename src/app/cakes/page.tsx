@@ -77,7 +77,7 @@ export default function CakeGalleryPage() {
               {/* Close button */}
               <button
                 type="button"
-                className="absolute top-4 right-4 text-black rounded-full p-2 text-[25px] z-20 hover:text-[#ff3131] focus:outline-none"
+                className="absolute top-4 right-4 text-black bg-[#fff] rounded-full p-2 text-[20px] z-20 hover:text-[#ff3131] focus:outline-none"
                 onClick={() => setOpen(false)}
                 aria-label="Close gallery"
               >

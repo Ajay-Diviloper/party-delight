@@ -112,12 +112,15 @@ const Card = ({ product }: { product: { name: string; image: string } }) => {
       href={`/products/${encodeURIComponent(product.name.toLowerCase().replace(/\s+/g, "-"))}`}
       className="bg-white overflow-hidden transition-all duration-300 flex-col h-full cursor-pointer block"
     >
-      <div className="relative w-full aspect-square flex items-center justify-center border border-[#8585856d]">
+      <div className="relative w-full  flex items-center justify-center ">
+    
+      
         <Image
           src={product.image}
           alt={product.name}
-          fill
-          className="object-contain w-full h-full"
+            width={400}
+                                    height={200}
+                className="w-full h-78 object-cover rounded-t-lg"
         />
       </div>
       <div className="p-3 sm:p-5 text-center mt-auto flex items-center justify-center">
