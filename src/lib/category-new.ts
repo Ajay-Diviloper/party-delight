@@ -237,7 +237,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Choco Chunk',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cookies/Choco-chunk1.jpg',
         price: '$2.40',
         description: 'Chewy vanilla cookie loaded with chunky chocolate pieces.'
       },
@@ -255,25 +255,25 @@ export const Category: Categories[] = [
       },
       {
         name: 'Lemon Crinkle',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cookies/Lemon-Crinkle-Cookies3.jpg',
         price: '$2.40',
         description: 'Bright, zesty lemon cookie rolled in sugar and baked crinkly.'
       },
       {
         name: 'Loaded Oreo Cheesecake',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cookies/Oreo-Cheesecake-Cookie2.jpg',
         price: '$2.80',
         description: 'Cookies & cream bits folded into a cheesecake-swirled dough.'
       },
       {
         name: 'Oats and Nuts',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cookies/Oats-and-nuts3.jpg',
         price: '$2.80',
         description: 'Hearty oatmeal cookie packed with toasted mixed nuts.'
       },
       {
         name: 'Peanut Butter',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/cookies/Peanut-Butter3.jpg',
         price: '$2.40',
         description: 'Classic peanut butter cookie with a soft, nutty crumb.'
       }
@@ -667,34 +667,34 @@ export const Category: Categories[] = [
   {
     type: 'dessert',
     name: 'Bag of Biscottis',
-    image: '/images/new-cat/Biscotti.webp',
+    image: '/images/new-cat/Biscottis 3.jpg',
     slug: 'bag-of-biscottis',
     description: 'Crunchy Italian twice-baked cookies, sold as a pack of 10.',
     products: [
       {
         name: 'Chocolate & Cranberry (Pack of 10)',
-        image: '/images/products-category-images/comingsoon.jpeg',
+           image: '/images/new-cat/Biscottis 3.jpg',
         slug: 'chocolate-cranberry-pack-of-10',
         price: '$10.00',
         description: 'Cocoa biscotti studded with tart dried cranberries.'
       },
       {
         name: 'Chocolate & Orange (Pack of 10)',
-        image: '/images/products-category-images/comingsoon.jpeg',
+          image: '/images/new-cat/Biscottis 3.jpg',
         slug: 'chocolate-orange-pack-of-10',
         price: '$10.00',
         description: 'Dark chocolate biscotti brightened with orange zest.'
       },
       {
         name: 'Spiced Almond (Pack of 10)',
-        image: '/images/products-category-images/comingsoon.jpeg',
+         image: '/images/new-cat/Biscottis 3.jpg',
         slug: 'spiced-almond-pack-of-10',
         price: '$10.00',
         description: 'Roasted almond biscotti with warm spice notes.'
       },
       {
         name: 'Cardamom, Pistachio & Rose (Pack of 10)',
-        image: '/images/products-category-images/comingsoon.jpeg',
+         image: '/images/new-cat/Biscottis 3.jpg',
         slug: 'cardamom-pistachio-rose-pack-of-10',
         price: '$10.00',
         description: 'Fragrant cardamom biscotti with pistachios and a hint of rose.'
