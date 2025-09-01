@@ -528,19 +528,19 @@ export const Category: Categories[] = [
     products: [
       {
         name: 'Butter Tart',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/tarts/Butter-Tart3.jpg',
         price: '$3.25',
         description: 'Classic buttery tart with a gooey brown-sugar filling.'
       },
       {
         name: 'Chocolate Tart',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/tarts/Raspberry-Chocolate3.jpg',
         price: '$5.25',
         description: 'Silky chocolate ganache in a crisp tart shell.'
       },
       {
         name: 'Fruit Tart',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/tarts/Fruit-Tart.jpg',
         price: '$5.25',
         description: 'Vanilla custard topped with seasonal fresh fruits.'
       },
@@ -558,7 +558,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Habibi Tart',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/tarts/Habibi-Tart3.jpg',
         price: '$5.50',
         description: 'Our signature specialty tart—rich, indulgent, and unforgettable.'
       }
