@@ -292,7 +292,7 @@ export const Category: Categories[] = [
     products: [
       {
         name: 'Choco Chip',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/muffins/Chocochip3.jpg',
         price: '$3.50',
         description: 'Classic vanilla muffin loaded with rich chocolate chips.'
       },
@@ -304,7 +304,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Morning Glory with Cream Cheese',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/muffins/Morning-Glory3.jpg',
         price: '$3.50',
         description: 'Hearty spiced muffin (carrot, apple & raisins) with a creamy cheese center.'
       },
@@ -327,7 +327,7 @@ export const Category: Categories[] = [
     products: [
       {
         name: 'Shortbread Chocolate (12 Pack)',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/shortbreads/Chocolate-shortbreads4.jpg',
         price: '$8.00',
         description: 'Classic buttery shortbread enriched with cocoa and chocolate notes.'
       },
@@ -391,7 +391,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Chocolate Orange Cranberry',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/scones/Chocolate-Orange-Cranberry1.jpg',
         price: '$4.00',
         description: 'Rich cocoa with bright orange zest and tart cranberries.'
       },
@@ -407,25 +407,25 @@ export const Category: Categories[] = [
   {
     type: 'dessert',
     name: 'Macarons',
-    image: '/images/new-cat/Macarons.webp',
+    image: '/images/Dessert/macarons/Assorted-Flavours1.jpg',
     slug: 'macarons',
     description: 'Delicate French macarons in assorted flavours.',
     products: [
       {
         name: 'Assorted Flavours (By Piece)',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/macarons/Assorted-Flavours1.jpg',
         price: '$2.25',
         description: 'Single macaron in rotating flavours, baked fresh daily.'
       },
       {
         name: 'Pack of 6',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/macarons/Assorted-Flavours1.jpg',
         price: '$12.00',
         description: 'Gift-ready box of six assorted macarons.'
       },
       {
         name: 'Pack of 12',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/macarons/Assorted-Flavours1.jpg',
         price: '$22.00',
         description: 'Dozen assorted macarons perfect for sharing.'
       }
@@ -435,13 +435,13 @@ export const Category: Categories[] = [
   {
     type: 'dessert',
     name: 'Pie',
-    image: '/images/new-cat/pie.jpg',
+    image: '/images/Dessert/pies/Apple-pies3.jpg',
     slug: 'pie',
     description: 'Classic fruit pies (eggless) available whole or by slice.',
     products: [
       {
         name: 'Apple Pie',
-        image: '/images/new-cat/pie.jpg',
+        image: '/images/Dessert/pies/Apple-pies3.jpg',
         price: '$3 $18.00',
         description: 'Eggless 9-inch pie with spiced apple filling.',
        variants: [
@@ -452,7 +452,7 @@ export const Category: Categories[] = [
       
       {
         name: 'Cherry Pie',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Dessert/pies/Cherry-pies3.jpg',
         price: '$18.00',
         description: 'Eggless 9-inch pie with tart cherry compote.',
         variants: [
@@ -835,28 +835,46 @@ export const Category: Categories[] = [
   
  
 
-  {
-    type: 'dessert',
-    name: 'Dessert Specials',
-    image: '/images/new-cat/dessert_special.jpg',
-    slug: 'dessert-specials',
-    description: 'Unique limited-time dessert offerings.',
-    products: [
-      {
-        name: 'Seasonal Special 1',
-        image: '/images/products-category-images/comingsoon.jpeg',
-        price: '$4.00 - $13.50',
-        description: 'Chef’s rotating special—ask for today’s flavour and toppings.'
-      },
-      {
-        name: 'Seasonal Special 2',
-        image: '/images/products-category-images/comingsoon.jpeg',
-        price: '$4.00 - $13.50',
-        description: 'Limited-time seasonal creation, available while supplies last.'
-      }
-    ]
-  },
-  
+{
+  type: 'dessert',
+  name: 'Dessert Specials',
+  image: '/images/new-cat/dessert_special.jpg',
+  slug: 'dessert-specials',
+  description: 'Unique limited-time dessert offerings.',
+  products: [
+    {
+      name: 'Glowball Warming',
+      image: '/images/Dessert/specials/Glowball-Warming1.jpg',
+      price: '$8.00 - $12.00',
+      description: 'Rich chocolate globe that melts as warm sauce is poured over.'
+    },
+    {
+      name: 'Mini Donuts',
+      image: '/images/Dessert/specials/Mini-Donuts1.jpg',
+      price: '$5.00 - $9.00',
+      description: 'Fresh bite-sized donuts with assorted toppings and sprinkles.'
+    },
+    {
+      name: 'Molten Lava Cake',
+      image: '/images/Dessert/specials/Molten-Lava-Cake1.jpg',
+      price: '$7.50 - $11.00',
+      description: 'Classic chocolate lava cake with a gooey molten center.'
+    },
+    {
+      name: 'Saffron Tres Leche',
+      image: '/images/Dessert/specials/Saffron-tres-leche3.jpg',
+      price: '$6.50 - $10.00',
+      description: 'Delicate tres leches cake infused with saffron and topped with dry fruits.'
+    },
+    {
+      name: 'Tiramisu',
+      image: '/images/Dessert/specials/Tiramisu1.jpg',
+      price: '$7.00 - $10.50',
+      description: 'Classic Italian layered dessert with coffee-soaked sponge and mascarpone cream.'
+    }
+  ]
+},
+
 
   // ------------------- SAVOURY -------------------
   {
