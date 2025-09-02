@@ -327,7 +327,7 @@ export const Category: Categories[] = [
     products: [
       {
         name: 'Shortbread Chocolate (12 Pack)',
-        image: '/images/Dessert/shortbreads/Chocolate-shortbreads4.jpg',
+        image: '/images/Dessert/shortbreads/short.jpeg',
         price: '$8.00',
         description: 'Classic buttery shortbread enriched with cocoa and chocolate notes.'
       },
@@ -488,7 +488,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Dawn Till Dusk',
-        image: '/images/new-cat/Cake Jars.webp',
+        image: '/images/Dessert/cake-jar/Dawn till dusk.jpg',
         price: '$7.25',
         description: 'Vanilla sponge layered with chocolate mousse and fudge.'
       },
@@ -512,7 +512,7 @@ export const Category: Categories[] = [
       },
       {
         name: 'Pie in a Jar',
-        image: '/images/new-cat/Cake Jars.webp',
+        image: '/images/Dessert/cake-jar/pie in the ja.jpg',
         price: '$7.25',
         description: 'Buttery crumble, fruit compote, and vanilla cream.'
       }
@@ -973,7 +973,7 @@ export const Category: Categories[] = [
     products: [
       {
         name: 'Brushcetta',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Savoury/danish/Bruschetta1.jpg',
         price: '$5.00',
         description: 'Tomato, herbs, and olive oil on a buttery Danish base.'
       },
@@ -985,13 +985,13 @@ export const Category: Categories[] = [
       },
       {
         name: 'Pesto Chicken',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Savoury/danish/Pesto-Chicken1.jpg',
         price: '$5.25',
         description: 'Shredded chicken with basil pesto and a hint of cheese.'
       },
       {
         name: 'Labneh Zaater',
-        image: '/images/products-category-images/comingsoon.jpeg',
+        image: '/images/Savoury/danish/Labneh-Zaater1.jpg',
         price: '$5.00',
         description: 'Tangy labneh with aromatic za’atar spice blend.'
       }
@@ -1008,19 +1008,19 @@ export const Category: Categories[] = [
   products: [
     {
       name: 'Corn Broccoli Quiche',
-      image: '/images/products-category-images/comingsoon.jpeg',
+      image: '/images/Savoury/Quiches/Chicky-Delight1.jpg',
       price: '$6.00',
       description: 'Sweet corn and broccoli bound in a creamy savoury custard.'
     },
     {
       name: 'Cheesy Mushy Delight',
-      image: '/images/products-category-images/comingsoon.jpeg',
+      image: '/images/Savoury/Quiches/Chicky-Delight2.jpg',
       price: '$6.00',
       description: 'Mushrooms and melted cheese baked into a rich quiche.'
     },
     {
       name: 'Chicky Delight',
-      image: '/images/products-category-images/comingsoon.jpeg',
+      image: '/images/Savoury/Quiches/Chicky-Delight3.jpg',
       price: '$6.50',
       description: 'Tender chicken pieces in a silky egg custard with herbs.'
     }
