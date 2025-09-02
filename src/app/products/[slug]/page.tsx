@@ -88,13 +88,14 @@ export default async function ProductPage({ params }: { params: Promise<any> }) 
             className="group relative w-full max-w-[700px] aspect-[7/5] overflow-hidden rounded-2xl shadow-md ring-1 ring-gray-100 bg-white"
             style={{ minHeight: '320px', minWidth: '0', height: '100%', width: '100%' }}
           >
-            <Image
-              src={product.image}
-              alt={product.name}
-              fill
-              className="transition-transform duration-300 ease-in-out object-cover w-full h-full group-hover:scale-105"
-              style={{ touchAction: 'manipulation' }}
-            />
+       <Image
+  src={product.image}
+  alt={product.name}
+  fill
+  className="transition-transform duration-300 ease-in-out object-cover object-top w-full h-full group-hover:scale-105"
+  style={{ touchAction: 'manipulation', objectPosition: 'bottom center' }}
+/>
+
             <div className="absolute inset-0 pointer-events-none rounded-2xl ring-1 ring-black/5"></div>
           </div>
         </div>
